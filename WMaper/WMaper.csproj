@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6E57E57-5159-4F8A-945A-0B0BF9709EE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMaper</RootNamespace>
+    <AssemblyName>wMaper</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Bound.cs" />
+    <Compile Include="Base\Coord.cs" />
+    <Compile Include="Base\Decor.cs" />
+    <Compile Include="Base\Event.cs" />
+    <Compile Include="Base\Layer.cs" />
+    <Compile Include="Base\Pixel.cs" />
+    <Compile Include="Core\Geog.cs" />
+    <Compile Include="Lang\Assets.cs" />
+    <Compile Include="Meta\Assem.cs" />
+    <Compile Include="Meta\Drift.cs" />
+    <Compile Include="Meta\Gauge.cs" />
+    <Compile Include="Meta\Embed\Menu.cs" />
+    <Compile Include="Meta\Embed\Tool.cs" />
+    <Compile Include="Meta\Radio\Msger.cs" />
+    <Compile Include="Meta\Patch.cs" />
+    <Compile Include="Meta\Store\Nature.cs" />
+    <Compile Include="Meta\Param\Option.cs" />
+    <Compile Include="Meta\Arise.cs" />
+    <Compile Include="Meta\Block.cs" />
+    <Compile Include="Meta\Calib.cs" />
+    <Compile Include="Meta\Dimen.cs" />
+    <Compile Include="Meta\Fonts.cs" />
+    <Compile Include="Meta\Frame.cs" />
+    <Compile Include="Core\Geom.cs" />
+    <Compile Include="Core\Mark.cs" />
+    <Compile Include="Core\Note.cs" />
+    <Compile Include="Misc\Share.xaml.cs">
+      <DependentUpon>Share.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Core\Mark.xaml.cs">
+      <DependentUpon>Mark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Core\Tips.xaml.cs">
+      <DependentUpon>Tips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Plug\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Plug\Eagle.xaml.cs">
+      <DependentUpon>Eagle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Plug\Genre.xaml.cs">
+      <DependentUpon>Genre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Plug\Scale.xaml.cs">
+      <DependentUpon>Scale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Plug\Tools.xaml.cs">
+      <DependentUpon>Tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Norm\ARC\ArcGISCache.cs" />
+    <Compile Include="Protocol\ArcGISOnline.cs" />
+    <Compile Include="Norm\ARC\ArcGISRest.cs" />
+    <Compile Include="Protocol\Baidu.cs" />
+    <Compile Include="Protocol\Geoq.cs" />
+    <Compile Include="Norm\OGC\Wms.cs" />
+    <Compile Include="Norm\OGC\Wmts.cs" />
+    <Compile Include="Norm\Puzzle.cs" />
+    <Compile Include="Plat\Tile.cs" />
+    <Compile Include="Core\Tips.cs" />
+    <Compile Include="Plat\Vect.cs" />
+    <Compile Include="Meta\Store\Listen.cs" />
+    <Compile Include="Meta\Store\Motion.cs" />
+    <Compile Include="Meta\Store\Screen.cs" />
+    <Compile Include="Meta\Store\Symbol.cs" />
+    <Compile Include="Meta\Store\Widget.cs" />
+    <Compile Include="Misc\View\Atlas.xaml.cs">
+      <DependentUpon>Atlas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Plug\Slide.xaml.cs">
+      <DependentUpon>Slide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\View\Ware\Scene.cs" />
+    <Compile Include="Plot\Arch.cs" />
+    <Compile Include="Plot\Icon.cs" />
+    <Compile Include="Plot\Line.cs" />
+    <Compile Include="Plot\Oval.cs" />
+    <Compile Include="Plot\Poly.cs" />
+    <Compile Include="Plot\Rect.cs" />
+    <Compile Include="Plot\Text.cs" />
+    <Compile Include="Plot\Wave.cs" />
+    <Compile Include="Plug\About.cs" />
+    <Compile Include="Plug\Await.cs" />
+    <Compile Include="Plug\Eagle.cs" />
+    <Compile Include="Plug\Genre.cs" />
+    <Compile Include="Plug\Menus.cs" />
+    <Compile Include="Plug\Popup.cs" />
+    <Compile Include="Plug\Scale.cs" />
+    <Compile Include="Plug\Slide.cs" />
+    <Compile Include="Plug\Tools.cs" />
+    <Compile Include="Proj\Epsg\EPSG_4326.cs" />
+    <Compile Include="Proj\Epsg\EPSG_900913.cs" />
+    <Compile Include="Proj\Projcs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Maper.cs" />
+    <Compile Include="Protocol\Amap.cs" />
+    <Compile Include="Protocol\Bing.cs" />
+    <Compile Include="Protocol\Google.cs" />
+    <Compile Include="Protocol\Mapabc.cs" />
+    <Compile Include="Protocol\MapWorld.cs" />
+    <Compile Include="Protocol\Soso.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Lang\Dict\en.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Lang\Dict\zh_Hans.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Lang\Dict\zh_Hant.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Misc\Share.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Atlas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Core\Mark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Core\Tips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Plug\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Plug\Eagle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Plug\Genre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Plug\Scale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Plug\Slide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Misc\View\Plug\Tools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Slide\slide_01.png" />
+    <Resource Include="Misc\Icon\Slide\slide_02.png" />
+    <Resource Include="Misc\Icon\Slide\slide_03.png" />
+    <Resource Include="Misc\Icon\Slide\slide_04.png" />
+    <Resource Include="Misc\Icon\Slide\slide_05.png" />
+    <Resource Include="Misc\Icon\Slide\slide_06.png" />
+    <Resource Include="Misc\Icon\Slide\slide_07.png" />
+    <Resource Include="Misc\Icon\Slide\slide_08.png" />
+    <Resource Include="Misc\Icon\Slide\slide_09.png" />
+    <Resource Include="Misc\Icon\Slide\slide_10.png" />
+    <Resource Include="Misc\Icon\Slide\slide_11.png" />
+    <Resource Include="Misc\Icon\Slide\slide_12.png" />
+    <Resource Include="Misc\Icon\Slide\slide_13.png" />
+    <Resource Include="Misc\Icon\Slide\slide_14.png" />
+    <Resource Include="Misc\Icon\Slide\slide_15.png" />
+    <Resource Include="Misc\Icon\Slide\slide_16.png" />
+    <Resource Include="Misc\Icon\Slide\slide_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WMagic\WMagic.csproj">
+      <Project>{f2be2be0-62d9-4a20-82a4-605d572a25b4}</Project>
+      <Name>WMagic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Genre\genre_02.png" />
+    <Resource Include="Misc\Icon\Genre\genre_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Genre\genre_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Mouse\drag.cur" />
+    <Resource Include="Misc\Icon\Mouse\free.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Genre\genre_04.png" />
+    <Resource Include="Misc\Icon\Genre\genre_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Tools\tool_03.png" />
+    <Resource Include="Misc\Icon\Tools\tool_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Tools\tool_01.png" />
+    <Resource Include="Misc\Icon\Tools\tool_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Basic\tips_01.png" />
+    <Resource Include="Misc\Icon\Basic\tips_02.png" />
+    <Resource Include="Misc\Icon\Basic\tips_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Patch\blank.png" />
+    <Resource Include="Misc\Icon\Patch\cause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Genre\genre_06.png" />
+    <Resource Include="Misc\Icon\Genre\genre_07.png" />
+    <Resource Include="Misc\Icon\Genre\genre_08.png" />
+    <Resource Include="Misc\Icon\Genre\genre_09.png" />
+    <Resource Include="Misc\Icon\Genre\genre_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Genre\genre_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Tools\tool_05.png" />
+    <Resource Include="Misc\Icon\Tools\tool_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Misc\Icon\Slide\slide_00.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.3</PostBuildEvent>
+  </PropertyGroup>
+</Project>

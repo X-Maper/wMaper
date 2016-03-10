@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="WMaper.Misc.View.Atlas" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:ware="clr-namespace:WMaper.Misc.View.Ware" mc:Ignorable="d" TextOptions.TextFormattingMode="Display">
+    <Canvas Background="Transparent">
+        <ware:Scene x:Name="TileLayer" Panel.ZIndex="110" />
+        <ware:Scene x:Name="PileLayer" Panel.ZIndex="120" />
+        <ware:Scene x:Name="NoteLayer" Panel.ZIndex="130" />
+        <ware:Scene x:Name="DrawLayer" Panel.ZIndex="140" />
+        <ware:Scene x:Name="MarkLayer" Panel.ZIndex="150" />
+        <ware:Scene x:Name="TipsLayer" Panel.ZIndex="160" />
+    </Canvas>
+</UserControl>

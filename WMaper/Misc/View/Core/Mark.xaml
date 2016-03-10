@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WMaper.Misc.View.Core.Mark" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" TextOptions.TextFormattingMode="Display" Visibility="Collapsed">
+    <Canvas x:Name="MarkLayer" Background="Transparent">
+        <Grid x:Name="MarkGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Rectangle x:Name="TextFrame" />
+                <Label x:Name="MarkLabel" FontFamily="SimSun" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Rectangle x:Name="IconFrame" />
+                <Image x:Name="MarkImage" Stretch="Fill" />
+            </Grid>
+        </Grid>
+    </Canvas>
+</UserControl>
