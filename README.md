@@ -1,2 +1,2 @@
 # wMaper
-GISEngine for windows
+GISEngine for windows by WPF
